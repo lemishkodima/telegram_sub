@@ -6,11 +6,11 @@ import logging
 
 
 BOT_TOKEN = '6250154933:AAGiuVuTLqPcXM8bx1vJRM2BK2XShmEXPcc' 
-CHANNEL_ID = -1001930889668
+CHANNEL_ID =  -1001699275031
 ADMIN_ID = 5807279918
 async def approve_request (chat_join: ChatJoinRequest, bot: Bot):
-   msg= f"Your request has been approved!\n\nJoin our channel:\nhttps://t.me/channel_name"
-   button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://example.com', disable_web_page_preview=True)   
+   msg= f"Ваша заявка одобрена!\n\nJВступить в канал:\nhttps://t.me/+EiD0IzVcrQFmMTAy"
+   button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+EiD0IzVcrQFmMTAy', disable_web_page_preview=True)   
    markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
 
 
