@@ -6,8 +6,8 @@ import logging
 
 
 BOT_TOKEN = '6250154933:AAGiuVuTLqPcXM8bx1vJRM2BK2XShmEXPcc' 
-CHANNEL_ID =  -1001930889668
-ADMIN_ID = 5807279918
+CHANNEL_ID =  -1001699275031
+ADMIN_ID = 430692329
 async def approve_request (chat_join: ChatJoinRequest, bot: Bot):
    msg= f"Ваша заявка одобрена!\n\nJВступить в канал:\nhttps://t.me/+EiD0IzVcrQFmMTAy"
    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+EiD0IzVcrQFmMTAy', disable_web_page_preview=True)   
