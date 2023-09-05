@@ -1,21 +1,18 @@
 import contextlib
 import asyncio 
 from aiogram.types import ChatJoinRequest, InlineKeyboardButton, InlineKeyboardMarkup
-from aiogram.utils.markdown import link
 from aiogram import Bot, Dispatcher, F
 import logging
 
 
 
-BOT_TOKEN = '5782607808:AAG6LpY2BUj25r1UeeWcBGNP8q7wOmZFVLQ' 
-CHANNEL_ID =  -1001712236318
-ADMIN_ID = 1889004772
+BOT_TOKEN = '6250154933:AAGiuVuTLqPcXM8bx1vJRM2BK2XShmEXPcc' 
+CHANNEL_ID =  -1001699275031
+ADMIN_ID = 430692329
 async def approve_request (chat_join: ChatJoinRequest, bot: Bot):
-   text = link('https://t.me/globalprofit', 'https://t.me/+YigHdJ6h1ck3YmQy')
-   msg= f"Дорогой друг, поздравляем тебя с приобретением подписки на закрытое сообщество PROFIT.\n\nВы можете войти в канал: {text}"
+   msg= f"Ваша заявка одобрена!\n\nВступить в канал: https://t.me/+eWU1DCA0sEdhYjk6"
    button = InlineKeyboardButton(text='ВСТУПИТЬ', url='https://t.me/+eWU1DCA0sEdhYjk6', disable_web_page_preview=True)   
    markup = InlineKeyboardMarkup(inline_keyboard=[[button]])
-
 
 
    await bot.send_message(chat_id=chat_join.from_user.id, text=msg, reply_markup=markup, disable_web_page_preview=True)
@@ -36,6 +33,11 @@ async def start():
      logging.error( exc_info=True)
     finally:
      await bot.session.close()
+
+
+if __name__ == '__main__':
+    with contextlib.suppress(KeyboardInterrupt, SystemExit):
+        asyncio.run(start())
 
 
 if __name__ == '__main__':
